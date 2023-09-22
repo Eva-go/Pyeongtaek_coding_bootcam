@@ -13,7 +13,6 @@ public class Star {
            }
            num=num+2;
            System.out.println();
-
         }
 
     }
