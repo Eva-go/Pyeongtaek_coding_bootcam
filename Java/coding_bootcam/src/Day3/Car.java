@@ -1,7 +1,7 @@
 package Day3;
 
 public class Car {
-    public String name;
+    public   String name;
     public int num;
 
     public Car(){
