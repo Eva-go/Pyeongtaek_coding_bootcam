@@ -9,5 +9,7 @@ public class PersonMain {
         System.out.println(p2.name+p2.phoneNumber+p2.email);
         String pa = p1.parking();
         System.out.println(p1.name+pa);
+
+        p1.purchase();
     }
 }

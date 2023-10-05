@@ -1,7 +1,7 @@
 package Day5.MakeClass.Animal;
 
 public class Animal {
-    String name;
+    public String name;
     int age;
     String gender;
     public  Animal(){}
