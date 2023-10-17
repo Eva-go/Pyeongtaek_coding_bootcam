@@ -10,19 +10,24 @@ public class Stack {
         if(i>=1&&i<100000){
             stack  = new int[i];
         }
-        //System.out.println(stack[1]);
-        String x = in.next();
-        int y = in.nextInt();
-        if(x.equals("push")){
-            push(y);
+        while(true)
+        {
+            String x = in.next();
+            int y = in.nextInt();
+            x = in.next();
+            switch (x){
+                case "push": push(y);
+                    break;
+                case "pop": pop();
+                    break;
+                case "size": size();
+                    break;
+                case "empty": empty();
+                    break;
+                case "top" : top();
+                    break;
+            }
         }
-        x = in.next();
-        if(x.equals("size")){
-            System.out.println(size());
-        }
-
-
-
     }
     public static void push(int i)
     {
@@ -43,6 +48,21 @@ public class Stack {
     public static int size()
     {
         return stack.length;
+    }
+    public static int empty(){
+        if(stack[stack.length-1]!=0)
+            return 1;
+        else
+            return 0;
+    }
+    public static int top()
+    {
+        if(stack[stack.length-1]!=0)
+        {
+            return stack[stack.length-1];
+        }
+        else
+            return -1;
     }
 
 }
