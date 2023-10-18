@@ -28,26 +28,26 @@ public class BookController {
         }
     }
 
-        @PutMapping("/update/{id}")
-        public String updateBookById(@PathVariable int id, @RequestBody BookDto updateBookDto){
-            if(id>= 0 && id<bookList.size()){
-                bookList.set(id,updateBookDto);
-                return "아이디: "+id+"의 데이터가 수정되었습니다.";
-            }
-            else {
-                return "Book ID :" +id + "의 데이터가 존재하지 않습니다.";
-            }
+    @PutMapping("/update/{id}")
+    public String updateBookById(@PathVariable int id, @RequestBody BookDto updateBookDto){
+        if(id>= 0 && id<bookList.size()){
+            bookList.set(id,updateBookDto);
+            return "아이디: "+id+"의 데이터가 수정되었습니다.";
         }
-        @DeleteMapping("/delete/{id}")
-        public String deleteBookById(@PathVariable int id){
-            if(id>=0 && id < bookList.size()){
-                bookList.remove(id);
-                return "요청하신 ID : "+id+"의 데이터를 삭제하였습니다.";
-            }
-            else {
-                return "요청하신  ID : [ " +id+ "]의 데이터가 존재하지 않습니다.";
-            }
+        else {
+            return "Book ID :" +id + "의 데이터가 존재하지 않습니다.";
         }
+    }
+    @DeleteMapping("/delete/{id}")
+    public String deleteBookById(@PathVariable int id){
+        if(id>=0 && id < bookList.size()){
+            bookList.remove(id);
+            return "요청하신 ID : "+id+"의 데이터를 삭제하였습니다.";
+        }
+        else {
+            return "요청하신  ID : [ " +id+ "]의 데이터가 존재하지 않습니다.";
+        }
+    }
 
 
 
